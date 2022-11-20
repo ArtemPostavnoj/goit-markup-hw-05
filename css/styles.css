@@ -75,6 +75,7 @@ ul{
     letter-spacing: 0.02em;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .link-nav:hover, 
 .link-nav:focus{
@@ -91,6 +92,7 @@ ul{
     padding-bottom: 10px;
     display: flex;
     align-items: center;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .contacts-nav:hover, 
 .contacts-nav:focus{
@@ -321,22 +323,23 @@ ul{
     height: auto;
 }
 .team-soc-list{
-display: flex;
-justify-content: center;
-gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 .team-soc-item{
-width: 44px;
-height: 44px;
+    width: 44px;
+    height: 44px;
 }
 .team-soc-link{
-width: 100%;
-height: 100%;
-background-color: #FFFFFF;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .team-soc-link:hover,
 .team-soc-link:focus{
@@ -369,6 +372,7 @@ justify-content: center;
     padding-left: 22px;
     padding-right: 22px;
     border: none;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .button-filter:focus,
 .button-filter:hover{
@@ -386,6 +390,7 @@ justify-content: center;
 .project-link{
     display: block;
     text-decoration: none;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .project-link:hover,
 .project-link:focus{
@@ -432,6 +437,7 @@ justify-content: center;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .clients-item:hover,
 .clients-item:focus{
@@ -452,6 +458,7 @@ justify-content: center;
 }
 .clients-icon{
     fill: #AFB1B8;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .projects-item{
     border-bottom: 1px solid #EEEEEE;
@@ -519,10 +526,14 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus{
     background-color: #2196F3; 
+}
+.footer-transition{
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .container-footer-icon{
     margin-left: 70px;
@@ -539,4 +550,50 @@ justify-content: center;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+  .backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 400ms linear, visibility 400ms linear;
+  }
+  .modal{
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+  }
+  .button-close-icon{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .button-close{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .address a{
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
